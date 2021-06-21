@@ -2,16 +2,13 @@ package com.demoblaze;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
 public class CreateUser extends setUp {
 
-        @Test(priority = 1)
+        @Test
         void crtUser(){
         //Act
         driver.get(BASE_URL);
@@ -21,8 +18,8 @@ public class CreateUser extends setUp {
         driver.findElement(By.xpath("//button[contains(text(),'Sign up')]")).click();
 
         //Simple Alert
-        Alert alert = driver.switchTo().alert();
-        alert.accept();
+        //Alert alert = driver.switchTo().alert();
+        //alert.accept();
 
 
 

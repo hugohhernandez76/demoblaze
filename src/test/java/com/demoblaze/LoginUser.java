@@ -2,42 +2,43 @@ package com.demoblaze;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 
-import java.util.concurrent.TimeUnit;
 
 public class LoginUser extends setUp {
 
-    @Test(priority = 2)
+    @Test
     void AccessUserAccount() {
 
 
         //Arrange
+        if (driver == null) {
+            System.out.println("Driver is Null");
 
+        System.out.println();
         driver.get(BASE_URL);
 
-        //Act
+        //User logging in
         driver.findElement(By.cssSelector("#login2")).click();
         driver.findElement(By.xpath("//input[@id='loginusername']")).sendKeys("vhernandez");
         driver.findElement(By.xpath("//input[@id='loginpassword']")).sendKeys("hugo1234");
         driver.findElement(By.xpath("//button[contains(text(),'Log in')]")).click();
 
-
-
-
-
-
         //Simple Alert
-        Alert simpleAlert = driver.switchTo().alert();
+        //Alert simpleAlert = driver.switchTo().alert();
         //Thread.sleep(3000);
-        simpleAlert.accept();
+        //simpleAlert.accept();
         //Thread.sleep(3000);
 
 
+        //verify if user is logged in
+        String userLoggedin = driver.findElement(By.linkText("Welcome vhernandez")).getText();
+        Assert.assertEquals(userLoggedin, "Welcome vhernandez", "Text did not matched!");
+
+
+    }
 
     }
 }
