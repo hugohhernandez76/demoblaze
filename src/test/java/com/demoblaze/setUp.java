@@ -29,7 +29,7 @@ public class setUp {
         // Set options to full screen
         ChromeOptions options = new ChromeOptions().addArguments("start-fullscreen");
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return driver;
     }
 
