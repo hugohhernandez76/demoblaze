@@ -46,4 +46,18 @@ public class setUpPage<properties> {
     public void closeBrowser(){
         driver.close();
     }
+
+    public boolean goToHomePage(){
+        try{
+            loadProperties();
+            openBrowser();
+            driver.get(BASE_URL);
+        }catch (Exception e){
+            System.out.println("Unable to navigate to page!");
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
 }

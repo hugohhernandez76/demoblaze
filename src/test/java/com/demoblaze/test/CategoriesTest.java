@@ -1,11 +1,12 @@
 package com.demoblaze.test;
 
+import com.demoblase.pages.CategoriesPage;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CategoriesTest extends setUpTest {
-
+        CategoriesPage categoriesPage = new CategoriesPage();
 
         @Test
         void validateCategories(){
