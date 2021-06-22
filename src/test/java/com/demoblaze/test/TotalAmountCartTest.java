@@ -1,11 +1,11 @@
-package com.demoblaze;
+package com.demoblaze.test;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TotalAmountCart extends setUp{
+public class TotalAmountCartTest extends setUpTest {
 
 
     @Test

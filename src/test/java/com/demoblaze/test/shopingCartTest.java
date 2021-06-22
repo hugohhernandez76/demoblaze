@@ -1,13 +1,15 @@
-package com.demoblaze;
+package com.demoblaze.test;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class PlaceAnOrder extends setUp {
+public class shopingCartTest extends setUpTest {
+
 
     @Test
-    void orderplaced() {
+    void cart() {
+
         if (driver == null) {
             System.out.println("Driver is Null");
 
@@ -42,23 +44,9 @@ public class PlaceAnOrder extends setUp {
             simpleAlert = driver.switchTo().alert();
             simpleAlert.accept();
 
-            //Placing an order
-            driver.findElement(By.xpath("//button[contains(text(),'Place Order')]")).click();
-            simpleAlert = driver.switchTo().alert();
-            simpleAlert.accept();
 
-            //Fill out shipping form and payment method
-            driver.findElement(By.xpath("//input[@id='name']")).sendKeys("Victor Hernandez");
-            driver.findElement(By.xpath("//input[@id='country']")).sendKeys("Mexico");
-            driver.findElement(By.xpath("//input[@id='city']")).sendKeys("Queretaro");
-            driver.findElement(By.xpath("//input[@id='card']")).sendKeys("4125789645237452");
-            driver.findElement(By.xpath("//input[@id='month']")).sendKeys("02");
-            driver.findElement(By.xpath("//input[@id='year']")).sendKeys("2025");
 
-            //Placing the order
-            driver.findElement(By.xpath("//button[contains(text(),'Purchase')]")).click();
-            driver.findElement(By.xpath("//button[contains(text(),'OK')]")).click();
-
+            //driver.close();
 
         }
     }

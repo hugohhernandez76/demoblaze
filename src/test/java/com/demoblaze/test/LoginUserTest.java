@@ -1,13 +1,11 @@
-package com.demoblaze;
+package com.demoblaze.test;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
 
 
-public class LoginUser extends setUp {
+public class LoginUserTest extends setUpTest {
 
     @Test
     void AccessUserAccount() {

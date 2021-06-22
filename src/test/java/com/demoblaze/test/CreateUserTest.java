@@ -1,12 +1,9 @@
-package com.demoblaze;
+package com.demoblaze.test;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
-public class CreateUser extends setUp {
+public class CreateUserTest extends setUpTest {
 
         @Test
         void crtUser(){

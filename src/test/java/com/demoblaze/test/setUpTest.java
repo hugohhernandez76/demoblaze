@@ -1,20 +1,19 @@
-package com.demoblaze;
+package com.demoblaze.test;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 import java.util.concurrent.TimeUnit;
 
-public class setUp {
+public class setUpTest {
     public static final String BASE_URL = "https://www.demoblaze.com/index.html";
     public static WebDriver driver;
 
 
-    @BeforeMethod
+    @BeforeSuite
     static void initDriver() {
         mainSetUp();
     }
@@ -33,7 +32,7 @@ public class setUp {
         return driver;
     }
 
-    @AfterMethod
+    @AfterSuite
     static void cleanup() {
         driver.close();
     }

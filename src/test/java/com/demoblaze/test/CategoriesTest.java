@@ -1,11 +1,10 @@
-package com.demoblaze;
+package com.demoblaze.test;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Categories extends setUp{
+public class CategoriesTest extends setUpTest {
 
 
         @Test
