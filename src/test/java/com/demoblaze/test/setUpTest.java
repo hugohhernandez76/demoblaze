@@ -15,17 +15,16 @@ public class setUpTest extends setUpPage {
     @BeforeSuite
     public void initDriver() {
         Assert.assertTrue(goToHomePage(), "An error has ocurred, unable to access Page!");
-   }
+    }
 
 
     //static WebDriver mainSetUp() {
 
 
+    //Arrange
+    //System.setProperty("webdriver.chrome.driver", "C:\\DevTools\\Drivers\\chromever91\\chromedriver.exe");
 
-        //Arrange
-        //System.setProperty("webdriver.chrome.driver", "C:\\DevTools\\Drivers\\chromever91\\chromedriver.exe");
-
-        // Set options to full screen
+    // Set options to full screen
 //        ChromeOptions options = new ChromeOptions().addArguments("start-fullscreen");
 //        driver = new ChromeDriver(options);
 //        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -33,9 +32,11 @@ public class setUpTest extends setUpPage {
 
 
     @AfterSuite
-    public void cleanup() {
+    public void tearDown() {
         closeBrowser();
+           }
+
     }
 
-}
+
 

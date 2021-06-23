@@ -6,13 +6,13 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class setUpPage<properties> {
+public class setUpPage {
     protected static WebDriver driver;
 
     public String browser;
     public String BASE_URL;
-    //public String Properties;
-    private Object properties;
+    public Properties properties;
+
 
 
     private void loadProperties() {
@@ -21,7 +21,7 @@ public class setUpPage<properties> {
         try {
             properties = new Properties();
             fis = new FileInputStream("C:\\Users\\victorhernandez\\demoblaze\\src\\main\\java\\config\\config.properties");
-            loadProperties();
+            properties.load(fis);
 
             browser = properties.getProperty("browser");
             BASE_URL = properties.getProperty("BASE_URL");
@@ -57,7 +57,8 @@ public class setUpPage<properties> {
             e.printStackTrace();
             return false;
         }
-        return true;
+
+        return false;
     }
 
 }

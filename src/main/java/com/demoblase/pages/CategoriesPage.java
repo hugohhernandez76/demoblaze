@@ -1,5 +1,13 @@
 package com.demoblase.pages;
 
-public class CategoriesPage extends setUpPage{
-    
+import org.openqa.selenium.By;
+
+public class CategoriesPage extends setUpPage {
+
+
+
 }
+
+
+
+

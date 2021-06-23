@@ -10,18 +10,16 @@ public class CategoriesTest extends setUpTest {
 
         @Test
         void validateCategories(){
-
-        if (driver== null) {
-            System.out.println("Driver is Null");
-
-            driver.get(BASE_URL);
+        categoriesPage.goToHomePage();
+        //if (driver== null) {
+           // System.out.println("Driver is Null");
 
             driver.findElement(By.cssSelector("#login2")).click();
             driver.findElement(By.xpath("//input[@id='loginusername']")).sendKeys("vhernandez");
             driver.findElement(By.xpath("//input[@id='loginpassword']")).sendKeys("hugo1234");
             driver.findElement(By.xpath("//button[contains(text(),'Log in')]")).click();
 
-
+            //Asserting if the menu CATEGORIES exist and the links Phones, Laptops, Monitors also exist.
             String menuCategories = driver.findElement(By.linkText("CATEGORIES")).getText();
             Assert.assertEquals(menuCategories, "CATEGORIES", "Menu is not displayed");
 
@@ -38,4 +36,4 @@ public class CategoriesTest extends setUpTest {
 
      }
 
-}
+
