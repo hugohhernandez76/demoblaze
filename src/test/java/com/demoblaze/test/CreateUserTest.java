@@ -14,13 +14,6 @@ public class CreateUserTest extends setUpTest {
         driver.findElement(By.xpath("//input[@id='sign-password']")).sendKeys("hugo1234");
         driver.findElement(By.xpath("//button[contains(text(),'Sign up')]")).click();
 
-        //Simple Alert
-        //Alert alert = driver.switchTo().alert();
-        //alert.accept();
-
-
-
-        //Assert
 
     }
 }

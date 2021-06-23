@@ -5,12 +5,15 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 public class setUpPage {
     protected static WebDriver driver;
 
     public String browser;
     public String BASE_URL;
+    public String username;
+    public String password;
     public Properties properties;
 
 
@@ -25,6 +28,9 @@ public class setUpPage {
 
             browser = properties.getProperty("browser");
             BASE_URL = properties.getProperty("BASE_URL");
+            username = properties.getProperty("username");
+            password = properties.getProperty("password");
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -42,8 +48,9 @@ public class setUpPage {
                 driver = new ChromeDriver();
             }
             driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
-    public void closeBrowser(){
+    public void closeBrowser(String browser){
         driver.close();
     }
 
