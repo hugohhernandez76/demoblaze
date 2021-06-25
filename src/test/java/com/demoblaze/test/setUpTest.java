@@ -13,7 +13,13 @@ public class setUpTest extends setUpPage {
         goToHomePage();
     }
 
+    {
 
+
+
+
+
+    }
 
     @AfterSuite
     public void tearDown() {
