@@ -10,7 +10,7 @@ public class LoginUserTest extends setUpTest {
     void AccessUserAccount() {
             //verify if user is logged in
         String userLoggedin = driver.findElement(By.cssSelector("#nameofuser")).getText();
-        Assert.assertSame(userLoggedin, "Welcome vhernandez", "Text did not matched!");
+        Assert.assertEquals(userLoggedin, "Welcome vhernandez", "Text did not matched!");
 
 
     }

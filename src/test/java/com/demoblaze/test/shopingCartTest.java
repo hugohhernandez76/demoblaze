@@ -18,8 +18,8 @@ public class shopingCartTest extends setUpTest {
 
             //User logging in
             driver.findElement(By.cssSelector("#login2")).click();
-            driver.findElement(By.xpath("//input[@id='loginusername']")).sendKeys("vhernandez");
-            driver.findElement(By.xpath("//input[@id='loginpassword']")).sendKeys("hugo1234");
+            driver.findElement(By.xpath("//input[@id='loginusername']")).sendKeys(username);
+            driver.findElement(By.xpath("//input[@id='loginpassword']")).sendKeys(password);
             driver.findElement(By.xpath("//button[contains(text(),'Log in')]")).click();
 
             //Adding a Phone to the Cart
@@ -46,7 +46,7 @@ public class shopingCartTest extends setUpTest {
 
 
 
-            //driver.close();
+
 
         }
     }
